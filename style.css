@@ -1,0 +1,195 @@
+/* GLOBAL STYLES*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body  {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  /*BUTTON ANIMATION*/
+  transition: background 0.5s ease-in-out;
+  /*animation: cloudAnimation 2s infinite alternate; BUTTON ANIMATION COLOR*/
+}
+
+button:hover {
+  background: #27394e;
+}
+/* /BUTTON-ANIMATION */
+/* NAV SECTION WITH HERO */
+
+.main-head {
+  background: #131c27;
+  color: white;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  min-height: 10vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+    url("/img/brown-hut-island-gazebo-38238.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*ALIGN VERTICALY*/
+  align-items: center; /* ALGIN HORIZONTALY*/
+  text-align: center;
+}
+
+.hero h3 {
+  padding: 5rem;
+}
+
+/* BENEFITS SECTION */
+
+#locations {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+    url("/img/house_black.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  padding: 0rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem; /*MAKES THE UNDERLINE LIKE BOLD AS LOVE */
+}
+
+.locations-head h3 {
+  padding: 4rem 0rem;
+  /* background: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; WORKS ON MOZZILA BUT NOT ON GOOGLE */
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  pointer-events: none;
+}
+
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+  /* 0% {
+    background: lightblue;
+  }
+  25% {
+    background: rgb(35, 98, 119);
+  }
+
+  100% {
+    background: purple;
+  }BUTTON ANIMATION COLOR */
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 2rem;
+  }
+  .cloud {
+    height: 20rem;
+  }
+  .locations-head h3 {
+    background: white;
+  }
+  .locations-head h2 {
+    margin: 1rem 0rem;
+  }
+}
